@@ -1,0 +1,39 @@
+body{
+    background-color:green;
+    color:yelow;
+
+}
+nav{
+    border:10px dashed green 
+    
+}
+header{
+
+    display:flex;
+    
+}
+
+
+ul{
+    background-color:purple;
+}
+
+main{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+article{
+    width: 75%;
+    background-color: blue;
+    //float:left;
+}
+
+
+aside{
+    width: 25%;
+}
+section{
+    background-color: aqua;
+    width:100%;
+}
