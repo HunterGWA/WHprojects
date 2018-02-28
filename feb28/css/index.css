@@ -1,0 +1,30 @@
+body {
+  background-color: aqua;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+section {
+  background-color: crimson;
+  padding: 10px;
+  margin: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 600px;
+  align-items: stretch;
+}
+
+div {
+  flex: 1;
+  font-size: 40px;
+  color: white;
+  background-color: deeppink;
+  margin: 5px;
+  align-items: stretch;
+  justify-content: center;
+  display: flex;
+}
+/*# sourceMappingURL=index.css.map */

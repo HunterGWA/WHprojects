@@ -1,0 +1,54 @@
+html {
+  background-image: url("../images/overlay.png"), url("../images/bg.jpg");
+  background-size: 25%, cover;
+  background-repeat: repeat;
+  padding: 75px 0% 25px 0%;
+}
+
+body {
+  width: 80vw;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 0;
+  list-style: none;
+}
+
+header {
+  height: 500px;
+  background-image: linear-gradient(rgba(130, 5, 168, 0.5), rgba(243, 63, 228, 0.5)), url("../images/pic01.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  background-color: orangered;
+  width: 50vw;
+  text-align: center;
+  padding: 50px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  display: inline-block;
+  border: 2px solid whitesmoke;
+  padding: 15px;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=template.css.map */
