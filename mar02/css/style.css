@@ -1,0 +1,36 @@
+body {
+  background-color: aqua;
+}
+
+p {
+  color: black;
+}
+
+#apple {
+  color: deeppink;
+}
+
+#orange {
+  color: green;
+}
+
+p.scooby {
+  color: red;
+}
+
+.spoiled {
+  color: yellow;
+}
+
+span {
+  color: purple;
+}
+
+div {
+  color: palevioletred;
+}
+
+div span {
+  color: orange;
+}
+/*# sourceMappingURL=style.css.map */
