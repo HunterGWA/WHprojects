@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+
+body{
+    background-image: url("/images/itachi_uchiha_14.gif");
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive;
+}
+div{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    position:relative;
+}
+
+nav{
+    color: white;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px deeppink;
+    flex-direction: row;
+
+   
+}
+h1 {
+    color: white;
+    text-shadow: 2px 2px deeppink;
+    font-size: 55px;
+    animation-name: typing;
+    animation-duration: 4s;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+     overflow: hidden; 
+    white-space: nowrap;
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+iframe{
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+@keyframes fade{
+    from{
+        opacity: 0;
+
+    }
+   to{
+    opacity: .60;
+   }
+}
+.icons{
+    font-size:100px;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-between;
+    text-shadow: 2px 7px deeppink;
+    color: white;
+}
+.flex{
+    justify-content: space-between;
+    flex-direction: column;
+}
+.hunter{
+    justify-content: space-around;
+}
+h2 {
+    font-size: 80px;
+    text-shadow: 2px 7px deeppink;
+    color: white;
+}
+mark{
+    background-color: deepskyblue;
+    color:white;
+}
