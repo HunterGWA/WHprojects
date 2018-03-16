@@ -30,16 +30,19 @@ nav{
     flex-direction: row;
     text-align: right;
     justify-content: space-between;
-    text-shadow: 2px 7px deeppink;
+    text-shadow: 2px 7px aqua;
     color: white;
+    a:visited{
+        color:white;
+    }
 }
 .flex{
     justify-content: space-between;
     flex-direction: column;
 }
 h1 {
-    color: white;
-    text-shadow: 2px 2px deeppink;
+    color: aqua;
+    text-shadow: 2px 2px white;
     font-size: 55px;
     animation-name: typing;
     animation-duration: 4s;

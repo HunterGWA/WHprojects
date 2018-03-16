@@ -18,7 +18,7 @@ nav{
     font-size: 150px;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 2px deeppink;
+    text-shadow: 2px 2px aqua;
     flex-direction: row;
 
    
@@ -68,6 +68,9 @@ iframe{
     justify-content: space-between;
     text-shadow: 2px 7px deeppink;
     color: aqua;
+    a:visited{
+        color:white;
+    }
     
 }
 .flex{
