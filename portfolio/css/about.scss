@@ -1,204 +1,183 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 
+$text-color: #00332B;
+$lighter: #00FFD8;
 
-body{
-    background-image: url("/images/keyboard.jpg");
-    background-size: cover;
-    font-family: 'Permanent Marker', cursive;
-}
-div{
-   
-        display:flex;
-        align-content: center;
-        justify-content: center;
-        position:relative;
-    
-}
-nav{
-    color: white;
-    font-size: 150px;
-    display: flex;
-    justify-content: center;
-    text-shadow: 2px 2px deeppink;
-    flex-direction: row;
-
-   
-}
-.icons{
-    font-size:100px;
-    display: flex;
-    flex-direction: row;
-    text-align: right;
-    justify-content: space-between;
-    text-shadow: 2px 7px aqua;
-    color: white;
-    a:visited{
-        color:white;
-    }
-}
-.flex{
-    justify-content: space-between;
-    flex-direction: column;
-}
-h1 {
-    color: aqua;
-    text-shadow: 2px 2px white;
-    font-size: 55px;
-    animation-name: typing;
-    animation-duration: 4s;
-    animation-delay: 200ms;
-    animation-fill-mode: forwards;
-     overflow: hidden; 
-    white-space: nowrap;
-    letter-spacing: .15em; 
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-      margin: 0 auto;
-      font-family: 'Permanent Marker', cursive;
+body, html {
+	height: 100vh;
+	width: 100%;
 }
 
-h2 {
-    color: aqua;
-    font-size: 50px;
-}
-u {
-    color: aqua;
-}
-
-li{
-    font-size: 30px;
-    color: aqua;
-}
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background: aqua;
-    box-shadow: inset 0 0 5px black;
-}
-::-webkit-scrollbar-thumb {
-    background: deeppink;
-}
-.hunter{
-    justify-content: space-around;
-}
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+body {
+  background: linear-gradient(to bottom, $text-color, lighten($text-color, 5%));
+  display: grid;
+  align-items: center;
+	justify-content: center;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 25%;
-  
-  padding: 10px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  margin-left: 0;
+body * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 250px;
-  border-radius: 3px 0 0 3px;
-}
-.prev {
-    left: 250px;
-    border-radius: 3px 0 0 3px;
-  }
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+span {
   text-align: center;
+  font: 8em 'Baloo', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-color;
+  animation: anim 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+  /*-webkit-animation: anim 6s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;*/
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+@mixin shadow($a, $b) {
+  text-shadow: $a $b 0px $lighter;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+$L1: 3px;
+$L2: -3px;
+$L3: 4px;
+$L4: -4px;
+
+@-webkit-keyframes anim {
+   0% {
+    @include shadow($L2, $L2);
+   }
+  10% {
+    @include shadow($L1, $L4);
+   }
+  20% {
+    @include shadow($L2, $L3);
+  }
+  30% {
+    @include shadow($L1, $L4);
+  }
+  40% {
+    @include shadow($L4, $L1);
+  }
+  50% {
+    @include shadow($L1, $L3);
+  }
+  60% {
+    @include shadow($L4, $L1);
+  }
+  70% {
+    @include shadow($L1, $L3);
+  }
+  80% {
+    @include shadow($L2, $L2);
+  }
+  90% {
+    @include shadow($L1, $L4);
+  }
+  100% {
+    @include shadow($L4, $L1);
+  }
+}
+$bg_color: linear-gradient(45deg, rgb(17, 153, 142), rgb(56, 239, 125));
+$main_color : white;
+$primary_color: black;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+html,body{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: $bg_color;
+}
+ul{
+  list-style-type:none;
+  padding: 0;
+  // margin: 25px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  ul.menu {
+    height: 50px;
+    width: 50px;
+    li {
+      position: relative;
+      background: $main_color;
+      margin: 10px;
+      height: 8px;
+      width: 50px;
+      // border-radius:20px;
+      transition: transform .3s, width .3s;
+    }
+  }
+  .active_menu {
+    li{
+      &:nth-child(1){
+        top: 18px;
+        transform: rotate(135deg);
+        transition: transform .3s;
+      }
+      &:nth-child(2){
+        width: 0;
+        // transform: rotate(180deg);
+        transition: width .3s;
+      }
+      &:nth-child(3){
+        bottom: 18px;
+        transform: rotate(-135deg);
+        transition: transform .3s;
+      }
+    }
+  }
+  
+  ul.links {
+    overflow:hidden;
+    width: 0;
+    margin-left: 0px;
+    transition: width .4s, margin-left .4s;
+    li{
+      margin: 5px;
+      a{
+        color:$main_color;
+        text-decoration:none;
+        transition: color .5s;
+        text-transform:uppercase;
+        font-size:54px;
+        font-family: 'Montserrat', sans-serif;
+        transition: color .5s, margin-left .5s;
+        &:hover {
+          color: $primary_color;
+          margin-left: 20px;
+          transition: color .5s, margin-left .5s;
+        }
+      }
+    }
+  }
+  .active_links{
+    width: 370px !important;
+    margin-left: 35px !important;
+    transition: width .4s, margin-left .4s;
+  }
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+
+
+.text-area{
+  background-color: yellow;
+  margin:0 auto;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+
+
+.shadow{
+  font-family: 'Permanent Marker', cursive;
+  font-size:30px;
+  text-align:center;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-.lefthalf{
-    display: block;
-    width: 30%;
-    float: LEFT;
-    font-family: 'Permanent Marker', cursive;
-}
-.righthalf {
-    display: block;
-    width: 70%;
-    float: left;
-    align-content: center;
-    flex-direction: column;
-    font-family: 'Permanent Marker', cursive;
-}
-.bottomrow {
-    display:block;
-    align-content: center;
-}

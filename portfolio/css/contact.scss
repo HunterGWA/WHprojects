@@ -1,69 +1,197 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 
+$text-color: #00332B;
+$lighter: #00FFD8;
 
-body{
-    background-image: url("/images/akatsuki-wallpaper-hd-e.jpg");
-    background-size: cover;
-    font-family: 'Permanent Marker', cursive;
+body, html {
+	height: 100vh;
+	width: 100%;
 }
-div{
-   
-        display:flex;
-        align-content: center;
-        justify-content: center;
-        position:relative;
-    
-}
-nav{
-    color: red;
-    font-size: 150px;
-    display: flex;
-    justify-content: center;
-    text-shadow: 2px 2px white;
-    flex-direction: row;
 
-   
+body {
+  background: linear-gradient(to bottom, $text-color, lighten($text-color, 5%));
+  display: grid;
+  align-items: center;
+	justify-content: center;
 }
-.icons{
-    font-size:100px;
-    display: flex;
-    flex-direction: row;
-    text-align: right;
-    justify-content: space-between;
-    text-shadow: 2px 7px red;
-    color: white;
-    a:visited{
-        color: white;
+
+body * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+span {
+  text-align: center;
+  font: 8em 'Baloo', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-color;
+  animation: anim 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /*-webkit-animation: anim 6s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;*/
+}
+
+@mixin shadow($a, $b) {
+  text-shadow: $a $b 0px $lighter;
+}
+
+$L1: 3px;
+$L2: -3px;
+$L3: 4px;
+$L4: -4px;
+
+@-webkit-keyframes anim {
+   0% {
+    @include shadow($L2, $L2);
+   }
+  10% {
+    @include shadow($L1, $L4);
+   }
+  20% {
+    @include shadow($L2, $L3);
+  }
+  30% {
+    @include shadow($L1, $L4);
+  }
+  40% {
+    @include shadow($L4, $L1);
+  }
+  50% {
+    @include shadow($L1, $L3);
+  }
+  60% {
+    @include shadow($L4, $L1);
+  }
+  70% {
+    @include shadow($L1, $L3);
+  }
+  80% {
+    @include shadow($L2, $L2);
+  }
+  90% {
+    @include shadow($L1, $L4);
+  }
+  100% {
+    @include shadow($L4, $L1);
+  }
+}
+$bg_color: linear-gradient(45deg, rgb(17, 153, 142), rgb(56, 239, 125));
+$main_color : white;
+$primary_color: black;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+html,body{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: $bg_color;
+}
+ul{
+  list-style-type:none;
+  padding: 0;
+  // margin: 25px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  ul.menu {
+    height: 50px;
+    width: 50px;
+    li {
+      position: relative;
+      background: $main_color;
+      margin: 10px;
+      height: 8px;
+      width: 50px;
+      // border-radius:20px;
+      transition: transform .3s, width .3s;
     }
-}
-.flex{
-    justify-content: space-between;
-    flex-direction: column;
+  }
+  .active_menu {
+    li{
+      &:nth-child(1){
+        top: 18px;
+        transform: rotate(135deg);
+        transition: transform .3s;
+      }
+      &:nth-child(2){
+        width: 0;
+        // transform: rotate(180deg);
+        transition: width .3s;
+      }
+      &:nth-child(3){
+        bottom: 18px;
+        transform: rotate(-135deg);
+        transition: transform .3s;
+      }
+    }
+  }
+  
+  ul.links {
+    overflow:hidden;
+    width: 0;
+    margin-left: 0px;
+    transition: width .4s, margin-left .4s;
+    li{
+      margin: 5px;
+      a{
+        color:$main_color;
+        text-decoration:none;
+        transition: color .5s;
+        text-transform:uppercase;
+        font-size:54px;
+        font-family: 'Montserrat', sans-serif;
+        transition: color .5s, margin-left .5s;
+        &:hover {
+          color: $primary_color;
+          margin-left: 20px;
+          transition: color .5s, margin-left .5s;
+        }
+      }
+    }
+  }
+  .active_links{
+    width: 370px !important;
+    margin-left: 35px !important;
+    transition: width .4s, margin-left .4s;
+  }
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+body {
+  font-family: "Segoe UI", Helvetica Neue, Tahoma, sans-serif;
 }
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background: aqua;
-    box-shadow: inset 0 0 5px black;
+
+.contact .fa:before {
+  display: inline-block;
+  opacity: 0.7;
 }
-::-webkit-scrollbar-thumb {
-    background: deeppink;
+
+.contact li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1em;
+  text-align: center;
 }
-.email{
-    font-size: 50px;
-    color: aqua;
-    display: flex;
-    flex-direction: column;
-    a:visited{
-        color:white;
-    }
+
+.contact p {
+  text-align: center;
 }
-h1{
-    font-family: 'Permanent Marker', cursive;
-    color: red;
-    text-shadow: 2px 2px white;
-    font-size: 55px;
+
+.contact {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.cont {
+  text-align: center;
 }

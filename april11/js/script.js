@@ -93,7 +93,7 @@ console.log(form.elements.value);
 
 
 var users = [];
-var user = 0;
+// var user = 0;
 
 function Account(username, email, password){
     this.username = username;
@@ -112,11 +112,14 @@ info.greeting("Hello ");
 var submitBtn = document.querySelector('input[type="submit"]');
 submitBtn.addEventListener('click', function(evt){
     evt.preventDefault();
-    users.push('user'+ user);
-    user++;
-    for(var i = 0; i < form.elements.length - 1; i++){
-        
-        console.log(form.elements[i].value);
-    }
-    users[user] = new UserAcc();
+    users.push(
+        new UserAcc(
+            form.elements[0].value,
+            form.elements[1].value,
+            form.elements[2].value,
+        )
+    );
+    
+    console.log(users);
+    
 });

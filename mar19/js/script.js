@@ -1,4 +1,4 @@
-// document.getElementById('btn2').style.color = "red";
+document.getElementById('btn2').style.color = "red";
 
 // console.log("Here is my first comsole message");
 // console.info("This is info");

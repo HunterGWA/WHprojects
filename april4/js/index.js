@@ -105,9 +105,9 @@
 
 
 function getUserAge(){
-    var userage = parseInt(prompt('Are you a boy ar girl?'));
-        if(userage == boy){
-            console.log('boy');
+    var userage = parseInt(prompt('How old are you?'));
+        if(userage < 21){
+            console.log('NOT OLD ENOUGH');
 
     }else if(userage == 21){
         console.log('GOOD TO GO');

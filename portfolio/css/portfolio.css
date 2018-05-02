@@ -1,1 +1,175 @@
-/* No CSS *//*# sourceMappingURL=portfolio.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+body {
+  background-color: #000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 300px;
+}
+
+.btn_fab {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 5px;
+  font-size: 12px;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+a.btn_fab:hover {
+  animation-name: change-background;
+  animation-duration: .3s;
+  -webkit-animation-delay: .3s;
+  /* Chrome, Safari, Opera */
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes change-background {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #fff;
+    color: #000;
+  }
+}
+
+a.btn_fab:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 2px;
+  left: 0;
+  top: 22px;
+  background-color: #fff;
+  animation-name: right-to-left;
+  animation-duration: .3s;
+}
+
+@-webkit-keyframes right-to-left {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 10px;
+    left: 0;
+    right: auto;
+  }
+}
+
+a.btn_fab:hover:before {
+  animation-name: left-to-right;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes left-to-right {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 10px;
+    right: 0;
+    left: auto;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container ul.menu {
+  height: 50px;
+  width: 50px;
+}
+
+.container ul.menu li {
+  position: relative;
+  background: white;
+  margin: 10px;
+  height: 8px;
+  width: 50px;
+  transition: transform .3s, width .3s;
+}
+
+.container .active_menu li:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+  transition: transform .3s;
+}
+
+.container .active_menu li:nth-child(2) {
+  width: 0;
+  transition: width .3s;
+}
+
+.container .active_menu li:nth-child(3) {
+  bottom: 18px;
+  transform: rotate(-135deg);
+  transition: transform .3s;
+}
+
+.container ul.links {
+  overflow: hidden;
+  width: 0;
+  margin-left: 0px;
+  transition: width .4s, margin-left .4s;
+}
+
+.container ul.links li {
+  margin: 5px;
+}
+
+.container ul.links li a {
+  color: white;
+  text-decoration: none;
+  transition: color .5s;
+  text-transform: uppercase;
+  font-size: 54px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color .5s, margin-left .5s;
+}
+
+.container ul.links li a:hover {
+  color: black;
+  margin-left: 20px;
+  transition: color .5s, margin-left .5s;
+}
+
+.container .active_links {
+  width: 370px !important;
+  margin-left: 35px !important;
+  transition: width .4s, margin-left .4s;
+}
+/*# sourceMappingURL=portfolio.css.map */

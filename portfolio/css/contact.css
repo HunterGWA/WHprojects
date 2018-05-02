@@ -1,74 +1,185 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+body, html {
+  height: 100vh;
+  width: 100%;
+}
+
 body {
-  background-image: url("/images/akatsuki-wallpaper-hd-e.jpg");
-  background-size: cover;
-  font-family: 'Permanent Marker', cursive;
+  background: linear-gradient(to bottom, #00332B, #004d41);
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
-div {
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  text-align: center;
+  font: 8em 'Baloo', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #00332B;
+  animation: anim 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /*-webkit-animation: anim 6s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;*/
+}
+
+@-webkit-keyframes anim {
+  0% {
+    text-shadow: -3px -3px 0px #00FFD8;
+  }
+  10% {
+    text-shadow: 3px -4px 0px #00FFD8;
+  }
+  20% {
+    text-shadow: -3px 4px 0px #00FFD8;
+  }
+  30% {
+    text-shadow: 3px -4px 0px #00FFD8;
+  }
+  40% {
+    text-shadow: -4px 3px 0px #00FFD8;
+  }
+  50% {
+    text-shadow: 3px 4px 0px #00FFD8;
+  }
+  60% {
+    text-shadow: -4px 3px 0px #00FFD8;
+  }
+  70% {
+    text-shadow: 3px 4px 0px #00FFD8;
+  }
+  80% {
+    text-shadow: -3px -3px 0px #00FFD8;
+  }
+  90% {
+    text-shadow: 3px -4px 0px #00FFD8;
+  }
+  100% {
+    text-shadow: -4px 3px 0px #00FFD8;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
   display: flex;
-  align-content: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container ul.menu {
+  height: 50px;
+  width: 50px;
+}
+
+.container ul.menu li {
   position: relative;
+  background: white;
+  margin: 10px;
+  height: 8px;
+  width: 50px;
+  transition: transform .3s, width .3s;
 }
 
-nav {
-  color: red;
-  font-size: 150px;
-  display: flex;
-  justify-content: center;
-  text-shadow: 2px 2px white;
-  flex-direction: row;
+.container .active_menu li:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+  transition: transform .3s;
 }
 
-.icons {
-  font-size: 100px;
-  display: flex;
-  flex-direction: row;
-  text-align: right;
-  justify-content: space-between;
-  text-shadow: 2px 7px red;
+.container .active_menu li:nth-child(2) {
+  width: 0;
+  transition: width .3s;
+}
+
+.container .active_menu li:nth-child(3) {
+  bottom: 18px;
+  transform: rotate(-135deg);
+  transition: transform .3s;
+}
+
+.container ul.links {
+  overflow: hidden;
+  width: 0;
+  margin-left: 0px;
+  transition: width .4s, margin-left .4s;
+}
+
+.container ul.links li {
+  margin: 5px;
+}
+
+.container ul.links li a {
   color: white;
+  text-decoration: none;
+  transition: color .5s;
+  text-transform: uppercase;
+  font-size: 54px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color .5s, margin-left .5s;
 }
 
-.icons a:visited {
-  color: white;
+.container ul.links li a:hover {
+  color: black;
+  margin-left: 20px;
+  transition: color .5s, margin-left .5s;
 }
 
-.flex {
-  justify-content: space-between;
-  flex-direction: column;
+.container .active_links {
+  width: 370px !important;
+  margin-left: 35px !important;
+  transition: width .4s, margin-left .4s;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+body {
+  font-family: "Segoe UI", Helvetica Neue, Tahoma, sans-serif;
 }
 
-::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background: aqua;
-  box-shadow: inset 0 0 5px black;
+.contact .fa:before {
+  display: inline-block;
+  opacity: 0.7;
 }
 
-::-webkit-scrollbar-thumb {
-  background: deeppink;
+.contact li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1em;
+  text-align: center;
 }
 
-.email {
-  font-size: 50px;
-  color: aqua;
-  display: flex;
-  flex-direction: column;
+.contact p {
+  text-align: center;
 }
 
-.email a:visited {
-  color: white;
+.contact {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 0;
 }
 
-h1 {
-  font-family: 'Permanent Marker', cursive;
-  color: red;
-  text-shadow: 2px 2px white;
-  font-size: 55px;
+.cont {
+  text-align: center;
 }
 /*# sourceMappingURL=contact.css.map */
